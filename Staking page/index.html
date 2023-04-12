@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS Token Staking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="connect">
+            <button id="connect-btn">Connect to MetaMask</button>
+        </div>
+        <h2>Your Staking Information</h2>
+        <p>
+        Amount staked: <span id="staking-amount">0</span> AIS
+        </p>
+        <p>
+        Staking start time: <span id="staking-start-time">-</span>
+        </p>
+        <p>
+        Staking duration: <span id="staking-duration">0</span> month(s)
+        </p>
+        
+        <h1>AIS Token Staking</h1>
+        <div class="balance">
+            <p>AIS Balance: <span id="balance">0</span> AIS</p>
+        </div>
+        <!-- Add USDT purchase option -->
+        <div class="usdt-purchase">
+            <h3>Purchase NFT with USDT</h3>
+            <select id="nft-duration">
+                <option value="0">1 Month - 59 USDT</option>
+                <option value="1">3 Months - 99 USDT</option>
+                <option value="2">6 Months - 159 USDT</option>
+                <option value="3">12 Months - 239 USDT</option>
+            </select>
+            <button id="purchase-usdt-btn" disabled>Purchase</button>
+        </div>
+        <!-- End USDT purchase option -->
+        <div class="staking-costs">
+            <p><strong>Required tokens:</strong></p>
+            <p>1 month: <span id="one-month-cost">100</span> AIS</p>
+            <p>3 months: <span id="three-months-cost">265</span> AIS</p>
+            <p>6 months: <span id="six-months-cost">500</span> AIS</p>
+            <p>12 months: <span id="twelve-months-cost">800</span> AIS</p>
+        </div>
+        <div class="staking">
+            <h3>Stake Tokens</h3>            
+            <select id="staking-duration" class="staking-duration">
+                <option value="0">1 Month</option>
+                <option value="1">3 Months</option>
+                <option value="2">6 Months</option>
+                <option value="3">12 Months</option>
+            </select>
+            <button id="stake-btn">Stake</button>
+        </div>
+        <div class="unstaking">
+            <h3>Unstake Tokens</h3>
+            <button id="unstake-btn">Unstake</button>
+        </div>
+        <div class="timer">
+            <h3>Staking Timer</h3>
+            <p>Time remaining: <span id="timer">00:00:00</span></p>
+        </div>
+        <div class="claim-nft">
+            <button id="claim-nft-btn">Claim NFT</button>
+        </div>
+    </div>
+</body>
+</html>
